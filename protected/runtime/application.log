@@ -6,3 +6,81 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/ProyectoCampo/index.php?r=gii
 ---
+2014/12/04 18:20:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cancha".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('cancha')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('cancha')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/cancha')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=site/cancha
+---
+2014/12/04 18:20:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Cancha".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('Cancha')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('Cancha')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Cancha')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=site/Cancha
+---
+2014/12/04 18:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "../cancha".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('../cancha')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=../cancha
+---
+2014/12/04 18:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "..".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('..')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('..')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/../cancha')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=site/../cancha
+---
+2014/12/04 18:38:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`campo`.`cancha`, CONSTRAINT `fk_Cancha_Local1` FOREIGN KEY (`idLocal`) REFERENCES `local` (`idLocal`)). The SQL statement executed was: INSERT INTO `cancha` (`nombre`, `tarifaD`, `tarifaN`, `idLocal`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\ProyectoCampo\protected\controllers\CanchaController.php (60)
+in C:\xampp\htdocs\ProyectoCampo\index.php (13)
+2014/12/04 18:38:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`campo`.`cancha`, CONSTRAINT `fk_Cancha_Local1` FOREIGN KEY (`idLocal`) REFERENCES `local` (`idLocal`)). The SQL statement executed was: INSERT INTO `cancha` (`nombre`, `tarifaD`, `tarifaN`, `idLocal`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\ProyectoCampo\protected\controllers\CanchaController.php(60): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CanchaController->actionCancha()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('cancha')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cancha/cancha')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=cancha/cancha
+HTTP_REFERER=http://localhost:8080/ProyectoCampo/index.php?r=cancha/cancha
+---
+2014/12/04 19:01:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "local".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('local')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('local')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('local/local')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=local/local
+---
+2014/12/04 19:02:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "local".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('local')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('local')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('local/local')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=local/local
+---
