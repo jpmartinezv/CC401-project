@@ -29,7 +29,9 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Principal', 'url'=>array('/local/index')),
+				array('label'=>'Locales', 'url'=>array('/local/listarlocales')),
+				array('label'=>'Canchas', 'url'=>array('/cancha/listarcanchas')),
+				array('label'=>'Usuarios', 'url'=>array('/usuarios/index')),
 				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

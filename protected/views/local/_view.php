@@ -29,5 +29,9 @@
 	<?php echo CHtml::encode($data->idUsuario); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
+	<?php echo CHtml::encode($data->estado); ?>
+	<br />
+
 
 </div>

@@ -27,5 +27,6 @@ $this->menu=array(
 		'direccion',
 		'telefono',
 		'idUsuario',
+		'estado',
 	),
 )); ?>
