@@ -136,3 +136,113 @@ Stack trace:
 REQUEST_URI=/blog/CC401-project/index.php?r=local/admin
 HTTP_REFERER=http://localhost/blog/CC401-project/index.php?r=local/
 ---
+2014/12/04 15:41:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "canchas".' in /var/www/html/blog/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CController.php(270): CController->missingAction('canchas')
+#1 /var/www/html/blog/yii/framework/web/CWebApplication.php(282): CController->run('canchas')
+#2 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/canchas')
+#3 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=site/canchas
+HTTP_REFERER=http://localhost/blog/CC401-project/index.php?
+---
+2014/12/04 15:41:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "campos".' in /var/www/html/blog/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CController.php(270): CController->missingAction('campos')
+#1 /var/www/html/blog/yii/framework/web/CWebApplication.php(282): CController->run('campos')
+#2 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/campos')
+#3 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=site/campos
+HTTP_REFERER=http://localhost/blog/CC401-project/index.php?r=site/canchas
+---
+2014/12/04 15:41:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "campos".' in /var/www/html/blog/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CController.php(270): CController->missingAction('campos')
+#1 /var/www/html/blog/yii/framework/web/CWebApplication.php(282): CController->run('campos')
+#2 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/campos')
+#3 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=site/campos
+---
+2014/12/04 15:41:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "campos".' in /var/www/html/blog/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CController.php(270): CController->missingAction('campos')
+#1 /var/www/html/blog/yii/framework/web/CWebApplication.php(282): CController->run('campos')
+#2 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/campos')
+#3 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=site/campos
+---
+2014/12/04 15:41:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "campos/index".' in /var/www/html/blog/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('campos/index')
+#1 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=campos/index
+HTTP_REFERER=http://localhost/blog/CC401-project/index.php?r=site/campos
+---
+2014/12/04 15:41:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "canchas/index".' in /var/www/html/blog/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('canchas/index')
+#1 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=canchas/index
+HTTP_REFERER=http://localhost/blog/CC401-project/index.php?r=campos/index
+---
+2014/12/04 15:41:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "canchas/index".' in /var/www/html/blog/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('canchas/index')
+#1 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=canchas/index
+HTTP_REFERER=http://localhost/blog/CC401-project/index.php?r=campos/index
+---
+2014/12/04 15:41:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "campos/index".' in /var/www/html/blog/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('campos/index')
+#1 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=campos/index
+HTTP_REFERER=http://localhost/blog/CC401-project/index.php?r=canchas/index
+---
+2014/12/04 15:42:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "campos/index".' in /var/www/html/blog/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('campos/index')
+#1 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=campos/index
+---
+2014/12/04 15:42:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "campos/index".' in /var/www/html/blog/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('campos/index')
+#1 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=campos/index
+---
+2014/12/04 15:42:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "campos/index".' in /var/www/html/blog/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('campos/index')
+#1 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=campos/index
+---
+2014/12/04 15:42:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "campos/index".' in /var/www/html/blog/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('campos/index')
+#1 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/blog/CC401-project/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/CC401-project/index.php?r=campos/index
+---
