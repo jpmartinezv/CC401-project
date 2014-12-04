@@ -174,9 +174,23 @@ class LocalController extends Controller
 	public function actionListarLocales()
 	{
 		$Locales = Local::model()->findAll();
+		$Estados = Estados::model()->findAll();
+		
+		$estados = array();
+
+    	foreach($Estados as $estado ){
+			$estados[$estado->tipo][$estado->ref] = $estado->descripcion;
+		}
+
+		$Locales2 = array();
+		foreach($Locales as $local ){
+			$local['estado'] = $estados['local'][$local->estado];
+			$Locales2[] = $local;
+		}
+		//$this->render('home',array(
 		        
 		$this->render('home',array(
-			'Locales'=>$Locales,
+			'Locales'=>$Locales2,
 		));
 				
 	}

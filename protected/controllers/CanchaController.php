@@ -198,10 +198,22 @@ class CanchaController extends Controller
 	public function actionListarCanchas()
 	{
 		$Canchas = Cancha::model()->findAll();
-		        
+		$Locales = Local::model()->findAll();
+		
+		$locales = array();
+
+    	foreach($Locales as $local ){
+			$locales[$local->idLocal] = $local->nombre;
+		}
+
+		$Canchas2 = array();
+		foreach($Canchas as $Cancha ){
+			$Cancha['idLocal'] = $locales[$Cancha->idLocal];
+			$Canchas2[] = $Cancha;
+		}
+
 		$this->render('home',array(
-			'Canchas'=>$Canchas,
+			'Canchas'=>$Canchas2,
 		));
-				
 	}
 }
