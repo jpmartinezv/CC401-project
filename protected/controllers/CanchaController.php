@@ -28,7 +28,7 @@ class CanchaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'NuevaCancha'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -169,5 +169,29 @@ class CanchaController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionNuevaCancha()
+	{
+	   	$model=new Cancha;
+		// uncomment the following code to enable ajax-based validation
+		/*
+					    if(isset($_POST['ajax']) && $_POST['ajax']==='cancha-nuevaCancha-form')
+							    {
+									        echo CActiveForm::validate($model);
+											        Yii::app()->end();
+											    }
+	    */
+
+		if(isset($_POST['Cancha']))
+		{
+			$model->attributes=$_POST['Cancha'];
+			if($model->validate())
+			{
+				// form inputs are valid, do something here
+				return;
+			}
+		}
+		$this->render('nuevaCancha',array('model'=>$model));
 	}
 }
