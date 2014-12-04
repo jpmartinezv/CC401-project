@@ -84,3 +84,43 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/ProyectoCampo/index.php?r=local/local
 ---
+2014/12/04 19:21:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "local".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('local')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('local')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('local/local')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=local/local
+---
+2014/12/04 19:24:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Local".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('Local')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('Local')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('local/Local')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=local/Local
+---
+2014/12/04 19:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Local".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('Local')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('Local')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Local/Local')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=Local/Local
+---
+2014/12/04 19:25:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "local".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('local')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('local')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Local/local')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ProyectoCampo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoCampo/index.php?r=Local/local
+---

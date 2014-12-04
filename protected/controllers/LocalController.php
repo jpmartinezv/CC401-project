@@ -33,4 +33,29 @@ class LocalController extends Controller
 		);
 	}
 	*/
+
+    public function actionLocal()
+    {
+        $model=new Local;
+
+        // uncomment the following code to enable ajax-based validation
+        /*
+        if(isset($_POST['ajax']) && $_POST['ajax']==='local-local-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        */
+
+        if(isset($_POST['Local']))
+        {
+            $model->attributes=$_POST['Local'];
+            if($model->validate())
+            {
+                // form inputs are valid, do something here
+                return;
+            }
+        }
+        $this->render('local',array('model'=>$model));
+    }
 }
