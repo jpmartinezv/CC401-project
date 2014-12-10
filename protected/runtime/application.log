@@ -637,3 +637,23 @@ Stack trace:
 #16 {main}
 REQUEST_URI=/blog/CC401-project/index.php?r=cancha/listarcanchas
 ---
+2014/12/10 12:26:40 [error] [exception.CException] exception 'CException' with message 'LocalController cannot find the requested view "home".' in /var/www/html/blog/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/blog/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#1 /var/www/html/blog/campos/protected/controllers/LocalController.php(194): CController->render('home', Array)
+#2 /var/www/html/blog/yii/framework/web/actions/CInlineAction.php(49): LocalController->actionListarLocales()
+#3 /var/www/html/blog/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/blog/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/blog/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/html/blog/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/html/blog/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/html/blog/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/html/blog/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/html/blog/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/blog/yii/framework/web/CWebApplication.php(282): CController->run('listarlocales')
+#12 /var/www/html/blog/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('local/listarloc...')
+#13 /var/www/html/blog/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/blog/campos/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/blog/campos/index.php?r=local/listarlocales
+---
