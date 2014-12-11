@@ -123,8 +123,10 @@ class CanchaController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Cancha');
+		$Canchas = Cancha::model()->findAll();
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'Canchas' => $Canchas,
 		));
 	}
 

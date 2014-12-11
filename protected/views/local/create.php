@@ -9,10 +9,9 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Local', 'url'=>array('index')),
-	array('label'=>'Manage Local', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Local</h1>
+<h1>Publicar Cancha</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

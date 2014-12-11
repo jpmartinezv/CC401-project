@@ -2,31 +2,29 @@
 /* @var $this LocalController */
 /* @var $model Local */
 
-$this->breadcrumbs=array(
-	'Locals'=>array('index'),
-	$model->idLocal,
-);
-
 $this->menu=array(
-	array('label'=>'List Local', 'url'=>array('index')),
-	array('label'=>'Create Local', 'url'=>array('create')),
-	array('label'=>'Update Local', 'url'=>array('update', 'id'=>$model->idLocal)),
-	array('label'=>'Delete Local', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idLocal),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Local', 'url'=>array('admin')),
+	array('label'=>'Actualizar información', 'url'=>array('update', 'id'=>$model->idLocal)),
+	array('label'=>'Eliminar publicación', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idLocal),'confirm'=>'Are you sure you want to delete this item?')),
 );
 ?>
 
-<h1>View Local #<?php echo $model->idLocal; ?></h1>
+<?php $local = $model;?>
+<h1><?=$local["nombre"]?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'idLocal',
-		'nombre',
-		'distrito',
-		'direccion',
-		'telefono',
-		'idUsuario',
-		'estado',
-	),
-)); ?>
+<div class="col-md-12 portfolio-item">
+    <a href="/campos/index.php?r=local/view&id=<?=$local['idLocal']?>">
+        <img  style="width: 700px; height: 400px;" class="img-responsive" src="img/local<?=$local['idLocal']?>.jpg" alt="">
+    </a>
+    <h3>
+    	Distrito: <?=$local['distrito']?>
+    </h3>
+    <h3>
+    	Dirección: <?=$local['direccion']?>
+    </h3>
+    <h3>
+    	Teléfonos: <?=$local['telefono']?>
+    </h3>
+	<h3>
+    	Estado: <?=$local['estado']?>
+    </h3>
+</div>

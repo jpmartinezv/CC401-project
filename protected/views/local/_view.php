@@ -17,21 +17,6 @@
 	<?php echo CHtml::encode($data->distrito); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('direccion')); ?>:</b>
-	<?php echo CHtml::encode($data->direccion); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('telefono')); ?>:</b>
-	<?php echo CHtml::encode($data->telefono); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
-	<?php echo CHtml::encode($data->idUsuario); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
-	<?php echo CHtml::encode($data->estado); ?>
-	<br />
-
 
 </div>
+

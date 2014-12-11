@@ -6,10 +6,11 @@
  * The followings are the available columns in table 'local':
  * @property integer $idLocal
  * @property string $nombre
- * @property integer $distrito
+ * @property string $distrito
  * @property string $direccion
  * @property string $telefono
  * @property integer $idUsuario
+ * @property integer $estado
  *
  * The followings are the available model relations:
  * @property Cancha[] $canchas
@@ -33,14 +34,14 @@ class Local extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idUsuario', 'required'),
-			array('distrito, idUsuario', 'numerical', 'integerOnly'=>true),
-			array('nombre', 'length', 'max'=>45),
+			array('idUsuario, estado', 'required'),
+			array('idUsuario, estado', 'numerical', 'integerOnly'=>true),
+			array('nombre, distrito', 'length', 'max'=>45),
 			array('direccion', 'length', 'max'=>200),
-			array('telefono', 'length', 'max'=>10),
+			array('telefono', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idLocal, nombre, distrito, direccion, telefono, idUsuario', 'safe', 'on'=>'search'),
+			array('idLocal, nombre, distrito, direccion, telefono, idUsuario, estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,6 +70,7 @@ class Local extends CActiveRecord
 			'direccion' => 'Direccion',
 			'telefono' => 'Telefono',
 			'idUsuario' => 'Id Usuario',
+			'estado' => 'Estado',
 		);
 	}
 
@@ -92,10 +94,11 @@ class Local extends CActiveRecord
 
 		$criteria->compare('idLocal',$this->idLocal);
 		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('distrito',$this->distrito);
+		$criteria->compare('distrito',$this->distrito,true);
 		$criteria->compare('direccion',$this->direccion,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('estado',$this->estado);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

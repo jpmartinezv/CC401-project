@@ -6,15 +6,22 @@ $this->breadcrumbs=array(
 	'Locals',
 );
 
-$this->menu=array(
-	array('label'=>'Create Local', 'url'=>array('create')),
-	array('label'=>'Manage Local', 'url'=>array('admin')),
-);
+$this->menu=array();
 ?>
 
-<h1>Locals</h1>
+<?php
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+$cont = 1;
+
+?>
+<?php foreach($Locales as $local){ ?>
+   <div class="col-md-6 portfolio-item">
+        <a href="/campos/index.php?r=local/view&id=<?=$local['idLocal']?>">
+            <img  style="width: 700px; height: 400px;" class="img-responsive" src="img/local<?=$cont++?>.jpg" alt="">
+        </a>
+        <h3>
+			<a href="/campos/index.php?r=local/view&id=<?=$local['idLocal']?>"><?=$local["nombre"]?></a>
+        </h3>
+        <p><?=$local["direccion"]?></p>
+    </div>
+<?php } ?>

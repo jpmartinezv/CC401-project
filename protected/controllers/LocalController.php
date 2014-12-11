@@ -28,7 +28,7 @@ class LocalController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'ListarLocales'),
+				'actions'=>array('index','view', 'ListarLocales', 'About'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -123,8 +123,10 @@ class LocalController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Local');
+		$Locales = Local::model()->findAll();
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'Locales' => $Locales,
 		));
 	}
 
@@ -192,6 +194,12 @@ class LocalController extends Controller
 		$this->render('home',array(
 			'Locales'=>$Locales2,
 		));
+				
+	}
+
+	public function actionAbout()
+	{		        
+		$this->render('about',array());
 				
 	}
 }
